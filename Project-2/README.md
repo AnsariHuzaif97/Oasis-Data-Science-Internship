@@ -1,73 +1,66 @@
-📊 Customer Segmentation using Clustering
-This project applies unsupervised machine learning techniques, particularly K-Means Clustering, to segment customers based on behavioral and demographic attributes. It aims to help businesses understand their customer base better and drive targeted marketing strategies.
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00f2fe&height=200&section=header&text=Project%2002:%20Customer%20Segmentation&fontSize=40&animation=fadeIn&fontAlignY=38&desc=Oasis%20Infobyte%20Data%20Science%20Internship&descAlignY=60&descAlign=50" alt="Project 2 Banner" />
+</div>
 
-🚀 Project Overview
+<div align="center">
+  <img src="https://img.shields.io/badge/Algorithm-K--Means_Clustering-013243?style=for-the-badge&logo=scikit-learn" alt="K-Means" />
+  <img src="https://img.shields.io/badge/Analysis-Exploratory_Data_Analysis-D00000?style=for-the-badge" alt="EDA" />
+  <img src="https://img.shields.io/badge/Python-Data_Science-F7931E?style=for-the-badge&logo=python" alt="Python" />
+</div>
 
-Goal: Segment customers based on income, spending behavior, and education.
+<br/>
 
-Techniques Used: K-Means Clustering, EDA (Exploratory Data Analysis)
+## 🎯 Project Objective
+The primary goal of this project is to apply unsupervised machine learning algorithms (**K-Means Clustering**) to segment retail customers based on their purchasing behavior, demographics, and income levels. By identifying distinct customer profiles, businesses can develop highly targeted marketing strategies and optimize resource allocation.
 
-Libraries: numpy, pandas, matplotlib, seaborn, scikit-learn
+---
 
-📂 Dataset
-The dataset contains various customer features like:
+## 📊 Dataset Overview
+The analysis was performed on the `ifood_df.csv` dataset, which contains **2,205 entries** and **39 distinct features** related to customer behavior.
 
-Age
+*   **Data Integrity**: `0%` NaN / Null values (Highly pristine dataset).
+*   **Average Customer Age**: ~51 Years
+*   **Average Customer Income**: Rs. 51,622
+*   **Highest Demographics**: Married (854 individuals) & College Graduates (1,113 individuals).
+*   **Customer Satisfaction Score**: `99.1%` (Only 0.90% filed complaints).
 
-Income
+---
 
-Educational Status
+## 🧠 Clustering Methodologies (K-Means)
 
-Marital Status
+To extract actionable business intelligence, the data was standardized using `StandardScaler` and clustered across three distinct multi-dimensional relationships:
 
-Spending metrics
+### 1. Wealth Across the Years (Age vs. Income)
+Customers were mathematically segmented into **3 distinct clusters**:
+*   🟢 **Highest Income & Slightly Older** (Premium Target Demographic)
+*   🔴 **Lowest Income & Youngest** (Budget-conscious Demographic)
+*   🔵 **Medium Income & Oldest** (Stable/Retirement Demographic)
 
-🧠 Algorithms Used
-K-Means Clustering: To create customer segments
+### 2. Demographic Clustering (Age vs. Marital Status)
+Analyzed the distribution of marital statuses across varying age brackets to identify lifecycle purchasing trends.
 
+### 3. Education & Earning Potential (Education vs. Income)
+Determined that customers holding a **Ph.D.** yield the highest average income, directly correlating educational attainment with purchasing power.
 
-📈 Key Visualizations
+---
 
-Bar plots of income vs educational status
+## 💡 Key Business Insights & Recommendations
 
-Pie charts for categorical distributions
+Based on the algorithm's output and exploratory data analysis:
 
-Cluster heatmaps and centroids
+1.  **Primary Target Audience**: The typical customer is close to retirement (~51 years old), holds a college degree, is married, and has a highly stable income. Marketing campaigns should heavily target this specific demographic.
+2.  **High Customer Retention**: With less than `1%` of customers filing complaints, the current product/service quality is exceptional. The business should focus on upselling existing customers rather than purely focusing on damage control.
+3.  **Financial Health**: The total revenue raised across the dataset was **Rs. 1,240,896**, indicating a highly profitable customer base with strong purchasing behavior.
 
-Scatter plot diagram for intensive information
+---
 
-📌 Insights
+## 🛠️ Tools & Libraries Used
 
-1. The dataset is prepared with immense care as there is no NaN value in the data.
-2. The average income of the customer is Rs. 51622.09.
-3. The average age of the customer is 51.09 years.
+*   `pandas` & `numpy`: Data manipulation, aggregation, and statistical calculations.
+*   `scikit-learn`: Implementation of `StandardScaler` and the `KMeans` algorithm.
+*   `matplotlib` & `seaborn`: High-definition data visualization and cluster plotting.
 
-Thus mostly person who are close to their retirement visits the shop with a decent income.
-
-# Customer Categorisation
-
-
-1. The total number of marital_Divorced is 230.
-2. The total number of marital_Married is 854.
-3. The total number of marital_Single is 477.
-4. The total number of marital_Together is 568.
-5. The total number of marital_Widow is 76.
-
-Thus the most of the buyers are married.
-
-Among the customers 
-
-1. The total number of education_2n Cycle is 198.
-2. The total number of education_Basic is 54.
-3. The total number of education_Graduation is 1113.
-4. The total number of education_Master is 364.
-5. The total number of education_PhD is 476
-
-Thus most of the consumer are Graduate.
-
-# Sales analysis
-
-1. Total money raised is Rs. 1240896 which indicates that selling was quite good in the provided timespan.
-2. 0.90 percent of the customers are not initially satisfied which represents that a very good service is provided to the customers.
-3. Average income of the customer having Phd as their qualification is the maximum among the other educational groups. 
-
+<br>
+<div align="center">
+  <i>Part of the Oasis Infobyte Internship Portfolio by Md Huzaifa Ansari</i>
+</div>
